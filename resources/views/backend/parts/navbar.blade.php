@@ -45,7 +45,12 @@
                 <li><a class="dropdown-item" href="profile.html">Profile</a></li>
                 <li><a class="dropdown-item" href="settings.html">Account settings</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                <li>
+                    <form action="{{route('admin.logout')}}" method="POST">
+                        @csrf
+                        <button class="dropdown-item" >Sign out</button>
+                    </form>
+                </li>
               </ul>
             </div>
           </div>
